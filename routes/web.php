@@ -12,6 +12,10 @@
 */
 
 Route::get('/','homeController@index');
+Route::get('/productimport','productController@index');
+Route::post('products/import', 'productController@import');
+Route::get('/addtocart/{pid}', 'homeController@add_to_cart');
+Route::get('/cart', 'homeController@show_cart');
 
 
 Route::group(['prefix' => 'admin'], function () {
